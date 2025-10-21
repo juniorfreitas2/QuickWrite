@@ -41,7 +41,7 @@ DB_PORT=5432
 DB_USER=postgres
 DB_PASSWORD=postgres
 DB_NAME=quickwrite
-JWT_SECRET=supersecretkey
+JWT_SECRET=mysecretjwtkey
 JWT_EXPIRES_IN=1d
 PORT=3000
 ```

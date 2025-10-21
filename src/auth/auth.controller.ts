@@ -19,10 +19,14 @@ export class AuthController {
     @ApiBody({ type: LoginDto })
     async login(@Body() body: LoginDto) {
         const user = await this.usersService.findByEmail(body.email);
-        if (!user) throw new UnauthorizedException('Invalid credentials');
+        if (!user) {
+            throw new UnauthorizedException('Invalid credentials')
+        }
 
         const valid = await this.authService.validateUser(body.email, body.password);
-        if (!valid) throw new UnauthorizedException('Invalid credentials');
+        if (!valid) {
+            throw new UnauthorizedException('Invalid credentials')
+        }
 
         return this.authService.login(user);
     }

@@ -16,7 +16,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         TypeOrmModule.forFeature([User, Permission]),
         PassportModule,
         JwtModule.register({
-            secret: process.env.JWT_SECRET || 'supersecretkey',
+            secret: process.env.JWT_SECRET || 'mysecretjwtkey',
             signOptions: { expiresIn: '1d' },
         }),
         UsersModule,

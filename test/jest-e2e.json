@@ -1,0 +1,17 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": "../",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "coverageDirectory": "./coverage",
+  "testEnvironment": "node",
+  "moduleNameMapper": {
+    "^users/(.*)$": "<rootDir>/src/users/$1",
+    "^permissions/(.*)$": "<rootDir>/src/permissions/$1",
+    "^auth/(.*)$": "<rootDir>/src/auth/$1",
+    "^articles/(.*)$": "<rootDir>/src/articles/$1",
+    "^bootstrap/(.*)$": "<rootDir>/src/bootstrap/$1"
+  }
+}
