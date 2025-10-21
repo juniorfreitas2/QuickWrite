@@ -209,3 +209,15 @@ curl -X POST http://localhost:3000/api/articles \
 -H "Content-Type: application/json" \
 -d '{"title":"Meu Artigo","content":"Conteúdo do artigo"}'
 ```
+## Documentação da API (Swagger)
+
+A API possui documentação interativa disponível via **Swagger**, onde você pode visualizar todas as rotas, parâmetros, schemas e testar as requisições diretamente no navegador.
+
+**URL de acesso:**  
+[http://localhost:3000/api/docs](http://localhost:3000/api/docs)
+
+> ⚠️ Lembre-se de iniciar a aplicação antes de acessar o Swagger.  
+> As rotas que requerem autenticação precisam do token JWT no cabeçalho `Authorization: Bearer <token>`.
+
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/orange-escape-101861/workspace/quickwrite/collection/1849712-974b8983-0ec6-467b-8dce-d27fbca910fd?action=share&creator=1849712)

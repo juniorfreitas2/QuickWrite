@@ -6,6 +6,8 @@ import { BootstrapService } from 'bootstrap/bootstrap.service';
 import { User } from 'users/user.entity';
 import { Permission } from 'permissions/permission.entity';
 import { AuthModule } from 'auth/auth.module';
+import {ArticlesModule} from "articles/articles.module";
+import {Article} from "articles/article.entity";
 
 @Module({
     imports: [
@@ -16,11 +18,12 @@ import { AuthModule } from 'auth/auth.module';
             username: process.env.DB_USER,
             password: process.env.DB_PASSWORD,
             database: process.env.DB_NAME,
-            entities: [User, Permission],
+            entities: [User, Permission, Article],
             synchronize: true,
         }),
         UsersModule,
         AuthModule,
+        ArticlesModule,
         PermissionsModule,
     ],
     providers: [BootstrapService],
