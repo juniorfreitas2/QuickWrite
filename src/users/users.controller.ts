@@ -46,7 +46,6 @@ export class UsersController {
     @ApiOperation({ summary: 'Criar novo usuário' })
     @ApiResponse({ status: 201, description: 'Usuário criado com sucesso.' })
     create(@Body() createUserDto: CreateUserDto) {
-        console.log(createUserDto)
         return this.usersService.create(createUserDto);
     }
 
